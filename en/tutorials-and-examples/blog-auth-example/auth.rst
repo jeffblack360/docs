@@ -5,7 +5,7 @@ Following our :doc:`/tutorials-and-examples/blog/blog` example, imagine we wante
 secure access to certain URLs, based on the logged-in
 user. We also have another requirement: to allow our blog to have multiple authors
 who can create, edit, and delete their own articles while
-disallowing other authors to make any changes to articles they do not own.
+preventing other authors from making changes to articles they do not own.
 
 Creating All User-Related Code
 ==============================
