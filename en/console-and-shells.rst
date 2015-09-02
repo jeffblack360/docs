@@ -205,7 +205,7 @@ properties attached to your shell::
             if (empty($this->args[0])) {
                 return $this->error('Please enter a username.');
             }
-            $user = $this->Users->findByUsername($this->args[0])->first();
+            $user = $this->Users->findByUsername($this->args[0]);
             $this->out(print_r($user, true));
         }
     }
@@ -218,8 +218,8 @@ Shell Tasks
 
 There will be times when building more advanced console applications, you'll want
 to compose functionality into re-usable classes that can be shared across many shells.
-Tasks allow you to extract commands into classes. For example the ``bake`` is made
-almost entirely of tasks. You define a tasks for a shell using the ``$tasks`` property::
+Tasks allow you to extract commands into classes. For example ``bake`` is made almost
+entirely of tasks. You define tasks for a shell using the ``$tasks`` property::
 
     class UserShell extends Shell
     {
@@ -357,7 +357,7 @@ the CakePHP console welcome message from being displayed on dispatched shells.
 Getting User Input
 ==================
 
-.. php:method:: in($question, $choices = null, $defaut = null)
+.. php:method:: in($question, $choices = null, $default = null)
 
 When building interactive console applications you'll need to get user input.
 CakePHP provides an easy way to do this::
